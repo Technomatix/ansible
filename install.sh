@@ -23,7 +23,7 @@ if [ ${machine} = Linux ] ; then   # install for debian based system
 
 elif [ ${machine} = Cygwin ] ; then		# install for windows system
 
-	#-------Install soft
+	
 	wget rawgit.com/transcode-open/apt-cyg/master/apt-cyg 
 	install apt-cyg /bin && rm apt-cyg
 	#----------------
