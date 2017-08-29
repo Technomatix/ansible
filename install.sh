@@ -12,7 +12,7 @@ esac
 echo "Your system: ${machine}"
 echo ""
 
-if [ ${machine} = Linux ] ; then   # install for debian based system
+if [ "${machine}" = Linux ] ; then   # install for debian based system
 	echo "--Install ansible for debian system--"
 	apt-get install software-properties-common -y 
 	apt-add-repository ppa:ansible/ansible -y
@@ -21,7 +21,7 @@ if [ ${machine} = Linux ] ; then   # install for debian based system
 	echo "Successful"
 	ansible --version
 
-elif [ ${machine} = Cygwin ] ; then		# install for windows system
+elif [ "${machine}" = Cygwin ] ; then		# install for windows system
 
 	
 	wget rawgit.com/transcode-open/apt-cyg/master/apt-cyg 
