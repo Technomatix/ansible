@@ -22,11 +22,8 @@ if [ "${machine}" = Linux ] ; then   # install for debian based system
 	ansible --version
 
 elif [ "${machine}" = Cygwin ] ; then		# install for windows system
-
-	
-	wget rawgit.com/transcode-open/apt-cyg/master/apt-cyg 
+	wget rawgit.com/transcode-open/apt-cyg/master/apt-cyg #install packege manager & dependenses
 	install apt-cyg /bin && rm apt-cyg
-	#----------------
 	apt-cyg install curl git nano make openssh binutils gmp \
 	openssl \
 	openssl-devel \
@@ -44,8 +41,7 @@ elif [ "${machine}" = Cygwin ] ; then		# install for windows system
 	python2-yaml \
 	python-paramiko \
 	gcc-core gcc-g++ \
- 	#--------Install ansible
-	easy_install-2.7 pip
+ 	easy_install-2.7 pip #--------Install ansible
 	pip install ansible
 	ansible --version
 fi
